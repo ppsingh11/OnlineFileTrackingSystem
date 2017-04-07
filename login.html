@@ -1,0 +1,100 @@
+#!/usr/bin/python
+<html>
+<head>
+<title>File Tracking System</title>
+<link rel="stylesheet" type="text/css" href="login.css">
+<script src="loginScript.js"></script>
+</head>
+<body>
+<br>
+<h1 style="color: red;text-align: center">NIT PATNA FILE TRACKING SYSTEM</h1><br><br>
+<div class="RegBox">
+<form id="NewEntry" action="AddEntry.cgi" target="_blank" method="post">
+<input id="f1" type=text name=Name placeholder="Name" required><br>
+<input id="f1" type=text name=Id placeholder="ID Number" required><br>
+<select  id="f1" name=branch required>
+	  <option value="null" selected>--Select Your Branch--</option>
+	  <option name="branch" value="CSE">CSE</option>
+	  <option name="branch" value="ECE">ECE</option>
+	  <option name="branch" value="ME">ME</option>
+	  <option name="branch" value="CE">CE</option>
+	  <option name="branch" value="EE">EE</option>
+	  <option name="branch" value="IT">IT</option>
+</select><br>
+	  <select id="f1" name=sem required>
+	  <option value="" selected>--Select Your Semester--</option>
+	  <option name="sem" value="1">1</option>
+	  <option name="sem" value="2">2</option>
+	  <option name="sem" value="3">3</option>
+	  <option name="sem" value="4">4</option>
+	  <option name="sem" value="5">5</option>
+	  <option name="sem" value="6">6</option>
+	  <option name="sem" value="7">7</option>
+	  <option name="sem" value="8">8</option>
+
+</select><br>
+<input id="f1" type=email name=Email placeholder="Email Address" required><br>
+<input id="f1" type=num name=Mob placeholder="Contact Number" required><br>
+<select id="f1sem" name=f_type onchange="changeFunc();" required>
+  <option value="null" selected>--Select File Type--</option>
+  <option  value="Medical">Medical Certificate</option>
+  <option  value="Leave">Leave Application</option>
+  <option  value="Project">Project File</option>
+  <option  value="Railways">Railways Concession</option>
+  <option  value="Other">Other</option>
+</select><br>
+<button id="f1" type="submit" value="Submit Entry" >Register</button><br>
+</form>
+</div>
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="container" style="text-align: center; ">
+      <label><b>From</b></label>
+      <select id="f1frm" name=f_type required>
+      <option value="null" selected>Select From</option>
+      <option  value="hod">HOD</option>
+      <option  value="ass">ASSISTANT</option>
+      <option  value="dean">DEAN</option>
+      <option  value="reg">REGISTRAR</option>
+      <option  value="dir">DIRECTOR</option>
+      </select>&nbsp&nbsp&nbsp
+
+
+      <label><b>Through</b></label>
+      <select id="f1tro" name=f_type required>
+      <option  value="null" selected>Select Through</option>
+      <option  value="hod">HOD</option>
+      <option  value="ass">ASSISTANT</option>
+      <option  value="dean">DEAN</option>
+      <option  value="reg">REGISTRAR</option>
+      <option  value="dir">DIRECTOR</option>
+      </select>&nbsp&nbsp&nbsp
+
+      <label><b>To</b></label>
+      <select id="f1to" name=f_type required>
+      <option value="null" selected>Select To</option>
+      <option  value="hod">HOD</option>
+      <option  value="ass">ASSISTANT</option>
+      <option  value="dean">DEAN</option>
+      <option  value="reg">REGISTRAR</option>
+      <option  value="dir">DIRECTOR</option>
+      </select><br><br>
+      <input type="checkbox" checked="checked"> Remember choice<br><br>
+      <br>
+      <button type="submit">Finish</button>
+
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw"><a href="#">May I Help You?</a></span>
+    </div>
+  </form>
+</div>
+</body>
+</html>
